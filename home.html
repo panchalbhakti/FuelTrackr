@@ -32,6 +32,7 @@
       <ul class="nav-links">
         <li><a href="login.html">Login</a></li>
         <li><a href="register.html">Register</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -50,16 +51,18 @@
       </div>
     </section>
     
-    <button id="currentLocationBtn">Use Current Location</button>
+    <!-- <button id="currentLocationBtn">Use Current Location</button> -->
 
     <section class="map-container">
-      <div id="map"></div>
+      <!-- <div id="map"></div> -->
       <div id="sidebar">
         <h2>Search for Petrol Pumps</h2>
         <div class="form-group">
           <label for="locationSearch">Enter Location:</label>
           <input type="text" id="locationSearch" placeholder="Search location">
         </div>
+        <p id="or">OR</p>
+        <button id="currentLocationBtn">Use Current Location</button>
         <div class="form-group">
           <label for="radius">Select Radius (km):</label>
           <select id="radius">
@@ -71,6 +74,7 @@
         </div>
         <button class="btn" id="searchButton">Search</button>
       </div>
+      <div id="map"></div>
     </section>
   </main>
 

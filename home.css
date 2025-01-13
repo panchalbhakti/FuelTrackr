@@ -1,89 +1,94 @@
-/* Reset */
-body, h1, p, ul, li, a, button {
+/* Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  }
+  body {
     font-family: 'Poppins', sans-serif;
-}
-  
-body {
-    background: #f4f4f9;
+    line-height: 1.6;
     color: #333;
-    overflow-x: hidden;
-}
+    background-color: #f8f8f8;
+  }
   
-/* Navbar */
-.navbar {
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: sticky;
-  height: 4rem;
-  top: 0;
-  z-index: 1000;
-}
-
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.navbar .logo h1 {
-  font-size: 1.8rem;
-  color: #4e54c8;
-  font-weight: 600;
-}
-
-.navbar .menu-toggle {
-  display: none;
-  font-size: 1.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #4e54c8;
-}
-
-.navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  transition: all 0.3s;
-}
-
-.navbar .nav-links li {
-  display: inline-block;
-}
-
-.navbar .nav-links li a {
-  text-decoration: none;
-  font-size: 1rem;
-  color: #4e54c8;
-  padding: 8px 12px;
-  border-radius: 5px;
-  transition: background 0.3s, color 0.3s;
-}
-
-.navbar .nav-links li a:hover {
-  background: #6fb1fc;
-  color: #fff;
-}
+  /* Navbar */
+  .navbar {
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
   
-.register-btn {
-    background: #f9a825;
-    padding: 0.5rem 1.2rem;
-    border-radius: 20px;
-    color: #003366;
-    font-weight: bold;
-    transition: transform 0.3s, background 0.3s;
-}
+  .navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
   
-.register-btn:hover {
-    background: #ffca28;
-    transform: scale(1.1);
-}
+  .navbar .logo h1 {
+    font-size: 1.8rem;
+    color: #4e54c8;
+    font-weight: 600;
+  }
+  
+  .navbar .menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #4e54c8;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s;
+  }
+  
+  .navbar .nav-links li {
+    display: inline-block;
+  }
+  
+  .navbar .nav-links li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #4e54c8;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .navbar .nav-links li a:hover {
+    background: #6fb1fc;
+    color: #fff;
+  }
+  
+  /* Responsive Navbar */
+  @media (max-width: 768px) {
+    .navbar .menu-toggle {
+      display: block;
+    }
+    .navbar .nav-links {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 200px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+    .navbar .nav-links.show {
+      display: flex;
+    }
+  }
   
 /* Hero Section */
 .hero {
@@ -150,6 +155,10 @@ body {
 .cng { background: #03a9f4; }
 .ev-charging { background: #9c27b0; }
 
+#or {
+    text-align: center;
+}
+
 /* Style for Current Location button */
 #currentLocationBtn {
     background-color: #4CAF50;
@@ -157,10 +166,12 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
+    width: 12rem;
     font-size: 1rem;
     cursor: pointer;
     margin-top: 20px;
     margin-left: 2rem;
+    margin-bottom: 1rem;
     transition: background-color 0.3s;
 }
 
@@ -173,13 +184,14 @@ body {
     height: 70vh;
     padding: 1rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #map {
     width: 50%;
     height: 100%;
-    margin-left: 1rem;
-    margin-bottom: 1rem;
+    margin:1rem;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s;
@@ -194,7 +206,8 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-stat;
+    justify-content: center;
+    align-items: center;
 }
 
 #sidebar h2 {
@@ -208,7 +221,7 @@ body {
 }
 
 .form-group label {
-    display: block;
+    /* display: block; */
     margin-bottom: 5px;
     font-weight: bold;
     color: #555;
@@ -256,7 +269,15 @@ body {
 
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+    }
+
+    .fuel-options {
+        gap: 1.2rem;
+    }
+
+    .map-container {
+        display: block;
     }
 
     .fuel-btn {
