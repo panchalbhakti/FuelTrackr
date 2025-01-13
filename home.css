@@ -1,0 +1,270 @@
+/* Reset */
+body, h1, p, ul, li, a, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+  
+body {
+    background: #f4f4f9;
+    color: #333;
+    overflow-x: hidden;
+}
+  
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  height: 4rem;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo h1 {
+  font-size: 1.8rem;
+  color: #4e54c8;
+  font-weight: 600;
+}
+
+.navbar .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4e54c8;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #4e54c8;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  background: #6fb1fc;
+  color: #fff;
+}
+  
+.register-btn {
+    background: #f9a825;
+    padding: 0.5rem 1.2rem;
+    border-radius: 20px;
+    color: #003366;
+    font-weight: bold;
+    transition: transform 0.3s, background 0.3s;
+}
+  
+.register-btn:hover {
+    background: #ffca28;
+    transform: scale(1.1);
+}
+  
+/* Hero Section */
+.hero {
+    /* background: linear-gradient(45deg, #003366, #0066cc), url('hero-image.jpg') no-repeat center center/cover; */
+    background: linear-gradient(135deg, #6fb1fc, #4364f7, #4e54c8);
+    color: #fff;
+    text-align: center;
+    padding: 4rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+  
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for consistency */
+}
+  
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+  
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    animation: slideIn 1s ease-in-out;
+}
+  
+.hero p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+  
+.fuel-options {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+  
+.fuel-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s, transform 0.2s;
+}
+  
+.fuel-btn:hover {
+    transform: scale(1.1);
+}
+  
+.petrol { background: #ff5722; }
+.diesel { background: #8bc34a; }
+.cng { background: #03a9f4; }
+.ev-charging { background: #9c27b0; }
+
+/* Style for Current Location button */
+#currentLocationBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 2rem;
+    transition: background-color 0.3s;
+}
+
+#currentLocationBtn:hover {
+    background-color: #45a049;
+}
+
+/* Map Section */
+.map-container {
+    height: 70vh;
+    padding: 1rem;
+    display: flex;
+}
+
+#map {
+    width: 50%;
+    height: 100%;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+}
+
+#map:hover {
+    transform: scale(1.02);
+}
+
+#sidebar {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-stat;
+}
+
+#sidebar h2 {
+    margin: 0 0 20px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    padding: 8px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.btn {
+    display: block;
+    width: 30%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(135deg, #6fb1fc, #4364f7, #4e54c8);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .fuel-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .map-container {
+        height: 50vh;
+    }
+}

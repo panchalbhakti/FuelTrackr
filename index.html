@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fuel Tracker - Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">
+        <h1>Fuel Tracker</h1>
+      </div>
+      <button class="menu-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+      <ul class="nav-links">
+        <li><a href="login.html">Login</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Find Nearby Fuel Stations Easily</h1>
+      <p>Your one-stop solution to locate petrol pumps and EV charging stations effortlessly.</p>
+      <div class="hero-buttons">
+        <a href="login.html" class="btn primary-btn">Get Started</a>
+        <a href="#features" class="btn secondary-btn">Learn More</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <h2>Why Choose Fuel Tracker?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Real-time Location</h3>
+          <p>Find fuel stations and EV charging points near you in real time.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Fuel Type Selection</h3>
+          <p>Search specifically for petrol, diesel, or electric charging stations.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Easy Navigation</h3>
+          <p>Get step-by-step directions to the nearest stations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Have questions? Reach out to us!</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn primary-btn">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 Fuel Tracker. All rights reserved.</p>
+  </footer>
+</body>
+</html>
