@@ -105,3 +105,14 @@ window.onload = function() {
       initMap();
     }
   };
+
+
+
+ // Get the elements
+ const menuToggle = document.getElementById('menu-toggle');
+ const navLinks = document.getElementById('nav-links');
+ 
+ // Toggle the menu
+ menuToggle.addEventListener('click', () => {
+   navLinks.classList.toggle('show');
+ });

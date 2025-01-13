@@ -69,27 +69,6 @@
     color: #fff;
   }
   
-  /* Responsive Navbar */
-  @media (max-width: 768px) {
-    .navbar .menu-toggle {
-      display: block;
-    }
-    .navbar .nav-links {
-      display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      width: 200px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 10px;
-    }
-    .navbar .nav-links.show {
-      display: flex;
-    }
-  }
-  
   /* Hero Section */
   .hero-section {
     height: 75vh;
@@ -258,6 +237,39 @@
 
   .footer .footer-links a {
     font-size: 1.1rem;
+  }
+}
+
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar .menu-toggle {
+    display: block;
+  }
+
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .navbar .nav-links.show {
+    display: flex;
+  }
+
+  .navbar .nav-links li {
+    padding: 10px 0;
+  }
+
+  .navbar .nav-links li a {
+    padding: 8px;
   }
 }
 
