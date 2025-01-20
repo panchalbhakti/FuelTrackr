@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fuel Tracker</title>
+  <title>Fuel Tracker - Landing Page</title>
   <link rel="stylesheet" href="home.css">
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWCxv79Ce2wNCkguHfkruQqvsRJH-Zr1s&libraries=places" defer></script>
-  <script src="script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
@@ -22,53 +20,59 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="login.html">Login</a></li>
         <li><a href="register.html">Register</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="index.html">Logout</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
 
+  <!-- Hero Section -->
+  <header class="hero-section">
+    <div class="hero-content">
+      <h1>Find Nearby Fuel Stations Easily</h1>
+      <p>Your one-stop solution to locate petrol pumps and EV charging stations effortlessly.</p>
+      <div class="hero-buttons">
+        <a href="login.html" class="btn primary-btn">Get Started</a>
+        <a href="#features" class="btn secondary-btn">Learn More</a>
+      </div>
+    </div>
+  </header>
+
   <main>
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Find Your Nearest Fuel Station</h1>
-        <p>Select your fuel type and locate the nearest station effortlessly.</p>
-        <div class="fuel-options">
-          <button class="fuel-btn petrol">Petrol</button>
-          <button class="fuel-btn diesel">Diesel</button>
-          <button class="fuel-btn cng">CNG</button>
-          <button class="fuel-btn ev-charging">EV Charging</button>
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+      <h2>Why Choose Fuel Tracker?</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Real-time Location</h3>
+          <p>Find fuel stations and EV charging points near you in real time.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Fuel Type Selection</h3>
+          <p>Search specifically for petrol, diesel, or electric charging stations.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Easy Navigation</h3>
+          <p>Get step-by-step directions to the nearest stations.</p>
         </div>
       </div>
     </section>
-    
-    <!-- <button id="currentLocationBtn">Use Current Location</button> -->
 
-    <section class="map-container">
-      <!-- <div id="map"></div> -->
-      <div id="sidebar">
-        <h2>Search for Petrol Pumps</h2>
-        <div class="form-group">
-          <label for="locationSearch">Enter Location:</label>
-          <input type="text" id="locationSearch" placeholder="Search location">
-        </div>
-        <p id="or">OR</p>
-        <button id="currentLocationBtn">Use Current Location</button>
-        <div class="form-group">
-          <label for="radius">Select Radius (km):</label>
-          <select id="radius">
-            <option value="1">1 km</option>
-            <option value="5">5 km</option>
-            <option value="10">10 km</option>
-            <option value="20">20 km</option>
-          </select>
-        </div>
-        <button class="btn" id="searchButton">Search</button>
-      </div>
-      <div id="map"></div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Have questions? Reach out to us!</p>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" rows="4" required></textarea>
+        <button type="submit" class="btn primary-btn">Send Message</button>
+      </form>
     </section>
   </main>
 
+  <!-- <footer class="footer">
+    <p>© 2025 Fuel Tracker. All rights reserved.</p>
+  </footer> -->
   <div class="footer">
     <div class="footer-content">
       <p>© 2025 Fuel Tracker. All rights reserved.</p>
@@ -80,7 +84,6 @@
       </div>
     </div>
   </div>
-
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWCxv79Ce2wNCkguHfkruQqvsRJH-Zr1s&libraries=places&callback=initMap" async defer></script>
+ <script src="script.js"></script>
 </body>
 </html>
