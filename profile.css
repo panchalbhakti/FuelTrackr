@@ -1,103 +1,257 @@
-/* Global Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f8f8;
-  }
-  
-  /* Navbar */
-  .navbar {
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .navbar .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .navbar .logo h1 {
-    font-size: 1.8rem;
-    color: #4e54c8;
-    font-weight: 600;
-  }
-  
-  .navbar .menu-toggle {
-    display: none;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #4e54c8;
-  }
-  
-  .navbar .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    transition: all 0.3s;
-  }
-  
-  .navbar .nav-links li {
-    display: inline-block;
-  }
-  
-  .navbar .nav-links li a {
-    text-decoration: none;
-    font-size: 1rem;
-    color: #4e54c8;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background 0.3s, color 0.3s;
-  }
-  
-  .navbar .nav-links li a:hover {
-    background: #6fb1fc;
-    color: #fff;
-  }
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #4364f7, #6fb1fc);
+  margin: 0;
+  padding: 0;
+  /* display: flex;
+  justify-content: center;
+  align-content: flex-start; */
+  min-height: 100vh;
+}
 
+/* Navbar */
+.navbar {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar .logo h1 {
+  font-size: 1.8rem;
+  color: #4e54c8;
+  font-weight: 600;
+}
+
+.navbar .menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #4e54c8;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  transition: all 0.3s;
+}
+
+.navbar .nav-links li {
+  display: inline-block;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: #4e54c8;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s, color 0.3s;
+}
+
+.navbar .nav-links li a:hover {
+  background: #6fb1fc;
+  color: #fff;
+}
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
-    .navbar .menu-toggle {
-      display: block;
-    }
-  
-    .navbar .nav-links {
-      display: none;
-      flex-direction: column;
-      background: #fff;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      width: 200px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 10px;
-    }
-  
-    .navbar .nav-links.show {
-      display: flex;
-    }
-  
-    .navbar .nav-links li {
-      padding: 10px 0;
-    }
-  
-    .navbar .nav-links li a {
-      padding: 8px;
-    }
+  .navbar .menu-toggle {
+    display: block;
   }
-  
+  .navbar .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  .navbar .nav-links.show {
+    display: flex;
+  }
+}
+
+.profile-wrapper {
+  width: 90%;
+  max-width: 700px;
+  margin: 3rem;
+  /* margin-left: 25rem; */
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.profile-wrapper:hover {
+  transform: scale(1.02);
+}
+
+/* Personal Info Section */
+.profile-section.personal-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+.profile-img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+}
+
+.upload-input {
+  display: none;
+}
+
+.upload-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #6fb1fc;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease;
+}
+
+.upload-btn:hover {
+  background-color: #4364f7;
+}
+
+.profile-img-container:hover .upload-btn {
+  display: block;
+}
+
+.user-details h1 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+.user-details p {
+  font-size: 16px;
+  color: #555;
+  margin: 5px 0;
+}
+
+/* Settings Section */
+.profile-section.settings {
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  background-color: #fff;
+  transition: all 0.3s ease;
+}
+
+.input-field:focus {
+  border-color: #4364f7;
+  outline: none;
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-btn {
+  background-color: #4364f7;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  width: 48%;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #6fb1fc;
+}
+
+.danger {
+  background-color: #ff4d4d;
+}
+
+.danger:hover {
+  background-color: #ff6666;
+}
+
+/* Editable fields */
+h1[contenteditable="true"], .user-email[contenteditable="true"], .user-phone[contenteditable="true"] {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+h1[contenteditable="true"]:focus, .user-email[contenteditable="true"]:focus, .user-phone[contenteditable="true"]:focus {
+  border-color: #4364f7;
+  outline: none;
+}

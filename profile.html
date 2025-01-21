@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="profile.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Section</title>
+  <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-    <!-- Navbar -->
+
+  <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <div class="logo">
@@ -21,5 +22,70 @@
       </ul>
     </div>
   </nav>
+
+  <div class="profile-wrapper">
+    <!-- Personal Info Section -->
+    <div class="profile-section personal-info">
+      <div class="profile-header">
+        <div class="profile-img-container">
+          <img src="profile-pic.jpg" alt="Profile" class="profile-img" id="profilePic">
+          <input type="file" id="uploadImage" class="upload-input" onchange="previewImage()">
+          <label for="uploadImage" class="upload-btn">Change Picture</label>
+        </div>
+        <div class="user-details">
+          <h1 id="userName" contenteditable="true" onblur="saveChanges('name')">Name</h1>
+          <p class="user-email" contenteditable="true" id="userEmail" onblur="saveChanges('email')">Email Address</p>
+          <p class="user-phone" contenteditable="true" id="userPhone" onblur="saveChanges('phone')">Contact Number</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preferences & Settings Section -->
+    <div class="profile-section settings">
+      <h2>Preferences & Settings</h2>
+      <div class="preferences">
+        <label for="fuelType">Preferred Fuel:</label>
+        <select id="fuelType" class="input-field">
+          <option value="Petrol">Petrol</option>
+          <option value="Diesel">Diesel</option>
+          <option value="EV">Electric</option>
+        </select>
+
+        <label for="savedLocations">Saved Locations:</label>
+        <input type="text" id="savedLocations" class="input-field" value="Home, Work">
+
+        <label for="notifications">Notification Preferences:</label>
+        <input type="text" id="notifications" class="input-field" value="Low Fuel Prices, Nearby Updates">
+      </div>
+
+      <div class="settings-actions">
+        <button class="action-btn">Save Changes</button>
+        <button class="action-btn danger">Log Out</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+        // Save changes when user clicks out of editable field
+    function saveChanges(field) {
+      const value = document.getElementById(field).textContent.trim();
+      console.log(`Updated ${field}: ${value}`);
+      // Here you can save the value to a database or localStorage or send it to an API
+    }
+
+    // Add this for the image preview feature
+    function previewImage() {
+      const file = document.getElementById('uploadImage').files[0];
+      const reader = new FileReader();
+      
+      reader.onloadend = function() {
+        document.getElementById('profilePic').src = reader.result;
+      };
+      
+      if (file) {
+        reader.readAsDataURL(file);
+      }
+    }
+  </script>
 </body>
 </html>
