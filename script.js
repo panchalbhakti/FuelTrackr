@@ -116,3 +116,7 @@ window.onload = function() {
  menuToggle.addEventListener('click', () => {
    navLinks.classList.toggle('show');
  });
+
+
+ //Petrol Pump Section Code
+ 
