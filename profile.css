@@ -259,6 +259,6 @@ h1[contenteditable="true"], .user-email[contenteditable="true"], .user-phone[con
 }
 
 h1[contenteditable="true"]:focus, .user-email[contenteditable="true"]:focus, .user-phone[contenteditable="true"]:focus {
-  border-color: #4364f7;
+  border-color: #4466fb;
   outline: none;
 }
